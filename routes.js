@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const express = require('express');
 const router = express.Router();
 const { User, Calorie } = require('./models');
 
@@ -14,7 +15,9 @@ router.post('/addcalories/', (req, res) => {
       return res.status(400).json({ error: 'Missing required data' });
     }
   
+    const id = new mongoose.Types.ObjectId();
     const newCalorie = new Calorie({
+      id,
       user_id,
       year,
       month,
@@ -99,6 +102,10 @@ router.get('/report/', (req, res) => {
     ]; 
   
     res.json(developers);
+  });
+
+  router.get('/', (req, res) => {
+    res.send('Welcome to the Calorie Management API!');
   });
 
   module.exports = router;
