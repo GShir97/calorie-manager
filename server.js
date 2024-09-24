@@ -21,6 +21,8 @@ mongoose.connect('mongodb+srv://goldshir97:goldshir97@cluster0.3x8dz.mongodb.net
   console.error('Error connecting to MongoDB:', err);
 });
 
+// Enable Mongoose debugging
+mongoose.set('debug', true);
 
 // start the server and listen on the specified port
 app.listen(port, () => {
