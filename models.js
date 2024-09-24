@@ -1,23 +1,26 @@
 const mongoose = require('mongoose');
 
+// define the schema for the User collection
 const userSchema = new mongoose.Schema({
-  id: { required: true }, 
-  first_name: { required: true },
-  last_name: { required: true }, 
-  birthday: {}
+  id: { type: Number, required: true },
+  first_name: { type: String, required: true },
+  last_name: { type: String, required: true }, 
+  birthday: { type: Date }
 });
 
+// define the schema for the Calorie collection
 const calorieSchema = new mongoose.Schema({
-  user_id: { required: true }, 
-  year: { required: true, min: 1900, max: 2024 },
-  month: { required: true, min: 1, max: 12 },
-  day: { required: true, min: 1, max: 31 },
-  description: { required: true }, 
+  user_id: { type: Number, required: true }, 
+  year: { type: Number, required: true, min: 1900, max: 2024 },
+  month: { type: Number, required: true, min: 1, max: 12 },
+  day: { type: Number, required: true, min: 1, max: 31 },
+  description: { type: String, required: true }, 
   category: { 
-      required: true,
+      type: String, 
+      required: true, 
       enum: ['breakfast', 'lunch', 'dinner', 'other'] 
   },
-  amount: { required: true, min: 0 }
+  amount: { type: Number, required: true, min: 0 }
 });
 
 
