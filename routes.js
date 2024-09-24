@@ -77,7 +77,8 @@ router.get('/report/', (req, res) => {
 // route to get a specific user by ID
     router.get('/users/:id', (req, res) => {
     const userId = parseInt(req.params.id);;
-
+    console.log(userId)
+    
 // search for a user by their ID in the db
     User.findOne({ id: userId })
       .then(user => {
