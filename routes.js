@@ -97,8 +97,14 @@ router.get('/report/', (req, res) => {
 // route to get information about the developers
   router.get('/about/', (req, res) => {
     const developers = [
-      { firstname: "Sharon", lastname: "George", id: 322211368, email: "sharong0602@gmail.com" },
-      { firstname: "Shir", lastname: "Goldstein", id: 318493384, email: "goldshir97@gmail.com" }
+      { firstname: "Sharon",
+        lastname: "George",
+        id: 322211368,
+        email: "sharong0602@gmail.com" },
+      { firstname: "Shir",
+        lastname: "Goldstein",
+        id: 318493384,
+        email: "goldshir97@gmail.com" }
     ]; 
   
     res.json(developers);
