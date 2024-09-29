@@ -1,3 +1,8 @@
+/*
+Shir Goldstein 318493384
+Sharon George 322211368
+*/
+
 const mongoose = require('mongoose');
 
 // define the schema for the User collection

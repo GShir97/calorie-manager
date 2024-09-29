@@ -1,3 +1,8 @@
+/*
+Shir Goldstein 318493384
+Sharon George 322211368
+*/
+
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
