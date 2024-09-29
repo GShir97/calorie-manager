@@ -10,7 +10,7 @@ app.use(routes);
 
 
 // connect to MongoDB using Mongoose
-mongoose.connect('mongodb+srv://goldshir97:goldshir97@cluster0.3x8dz.mongodb.net/', {
+mongoose.connect('mongodb+srv://goldshir97:goldshir97@cluster0.3x8dz.mongodb.net/mongoDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
