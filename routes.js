@@ -83,7 +83,6 @@ router.get('/report/', (req, res) => {
     User.findOne({ id: userId })
       .then(user => {
         if (!user) {
-          console.log("this is the user id: $userId")
           return res.status(404).json({ error: 'User not found' });
         }
         res.json(user);
